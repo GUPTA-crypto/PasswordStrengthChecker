@@ -1,110 +1,70 @@
-html{
-    background: #696969;
-    //background:#4EC094;
-    font-family: 'Lato', sans-serif;
-    color:white;
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-#myform input[type="password"],#myform input[type="text"]{
-        background:transparent;
-    border: 2px solid #46AC84;
-color: #777;
-font-family: "Lato", sans-serif;
-font-size: 14px;
-padding: 9px 5px;
-height: 45px;
-text-indent: 6px;
--webkit-appearance: none;
--webkit-border-radius: 6px;
--moz-border-radius: 6px;
-border-radius: 6px;
--webkit-box-shadow: none;
--moz-box-shadow: none;
-box-shadow: none;
--webkit-transition: border .25s linear, color .25s linear;
--moz-transition: border .25s linear, color .25s linear;
--o-transition: border .25s linear, color .25s linear;
-transition: border .25s linear, color .25s linear;
--webkit-backface-visibility: hidden;
-width:100%;
+body{
+    height: 100vh;
+    background: linear-gradient(
+        135deg,
+        #61d954,
+        #2ebf75
+    );
 }
-#myform input[type="password"]:focus,#myform input[type="text"]:focus{
-outline:0;
+.wrapper{
+    background-color: #ffffff;
+    width: 450px;
+    padding: 50px 0;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    box-shadow: 0 20px 25px rgba(0,0,0,0.2);
 }
-#myform{
-width: 500px;
-margin: 0 auto;
-position: relative;
-margin-bottom:60px;
+.container{
+    width: 300px;
+    position: relative;
+    margin: auto;
 }
-.strength_meter{
-position: absolute;
-left: 0px;
-top: 0px;
-width: 100%;
-height: 43px;
-z-index:-1;
-border-radius:5px;
-padding-right:13px;
+input,
+p{
+    font-family: "Roboto Mono", monospace;
 }
-.button_strength {
-text-decoration: none;
-color: #FFF;
-font-size: 13px;
-}
-.strength_meter div{
-    width:0%;
-height: 43px;
-text-align: right;
-color: #000;
-line-height: 43px;
--webkit-transition: all .3s ease-in-out;
--moz-transition: all .3s ease-in-out;
--o-transition: all .3s ease-in-out;
--ms-transition: all .3s ease-in-out;
-transition: all .3s ease-in-out;
-padding-right: 12px;
-border-radius:5px;
-}
-.strength_meter div p{
-position: absolute;
-top: 22px;
-right: 0px;
-color: #FFF;
-font-size:13px;
+input{
+    width: 100%;
+    height: 50px;
+    padding: 0 40px 0 20px;
+    position: relative;
+    background-color: #f5f5f5;
+    border: none;
+    outline: none;
+    border-radius: 5px 5px 0 0;
 }
 
-.veryweak{
-    background-color: #FFA0A0;
-border-color: #F04040!important;
-width:25%!important;
+#toggle{
+    position: absolute;
+    top: 17px;
+    right: 15px;
+    color: #808080;
+    cursor: pointer;
 }
-.weak{
-background-color: #FFB78C;
-border-color: #FF853C!important;
-width:50%!important;
+.strength{
+    width: 25%;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    bottom: 5px;
 }
-.medium{
-background-color: #FFEC8B;
-border-color: #FC0!important;
-width:75%!important;
+#strength-bar{
+    background-color: #dcdcdc;
+    height: 10px;
+    position: relative;
 }
-.strong{
-background-color: #C3FF88;
-border-color: #8DFF1C!important;
-width:100%!important;
-}
-h1{
-    color:white;
-    font-size:50px;
-    text-align:center;
-    padding-top:30px;
-    margin-bottom:20px;
-}
-h1 span{
-    font-weight:bold;
-    color:white;
-    opacity:.3;
-}
-p {
-  text-align: center;
+p{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
 }
